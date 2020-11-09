@@ -1,6 +1,6 @@
 FROM maven:3.6.3-jdk-8 AS build
-COPY /demo/src /home/app/src
-COPY /demo/pom.xml /home/app
+COPY /src /home/app/src
+COPY /pom.xml /home/app
 RUN mvn -f /home/app/pom.xml clean package
 
 FROM openjdk:8
